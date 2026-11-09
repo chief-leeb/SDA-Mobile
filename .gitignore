@@ -1,0 +1,38 @@
+# Gradle
+.gradle/
+.kotlin/
+build/
+**/build/
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Android SDK path
+local.properties
+
+# Build outputs
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+
+# Signing keys and passwords, never commit these
+keystore/
+*.jks
+*.keystore
+keystore.properties
+
+# Release artifacts
+dist/
+*.sha256
+
+# Logs and OS files
+*.log
+*.hprof
+.DS_Store
+Thumbs.db
