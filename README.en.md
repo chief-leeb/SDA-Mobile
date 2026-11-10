@@ -4,13 +4,13 @@
 
 [Русский](README.md) · **English**
 
-An Android client inspired by Steam Desktop Authenticator: Steam Guard codes, trade and market confirmations, authenticator enrollment, and maFile transfer. The interface is available in English and Russian.
+An Android client inspired by [Steam Desktop Authenticator](https://github.com/Jessecar96/SteamDesktopAuthenticator/): Steam Guard codes, trade and market confirmations, authenticator enrollment, and maFile transfer. The interface is available in English and Russian. Full vibecode.
 
 [Download APK](https://github.com/chief-leeb/SDA-Mobile/releases/latest) · [Report an issue](https://github.com/chief-leeb/SDA-Mobile/issues)
 
 ## Status
 
-Version 1.1.0. The build and lint pass, but the app has not been tested on a physical device yet. Try it with an alt account before using it with your main account.
+Version 1.1.0. The build and lint pass, the app has been tested on a physical device. Try it with an alt account before using it with your main account.
 
 ## Features
 
@@ -21,12 +21,6 @@ Version 1.1.0. The build and lint pass, but the app has not been tested on a phy
 - Multiple accounts, active account selection, time sync.
 - Revoke Steam Guard with a revocation code and remove an account from the device.
 - In-app interface language switch in Settings: English or Russian. On first launch the language follows the device locale.
-
-## Relationship to Steam Desktop Authenticator
-
-This is an independent Kotlin implementation for Android, not a fork of [Jessecar96/SteamDesktopAuthenticator](https://github.com/Jessecar96/SteamDesktopAuthenticator). It shares no code or commit history with the C# desktop app. The maFile format is compatible, so files can be moved in both directions.
-
-Application ID: `io.github.chiefleeb.sdamobile`. Starting with 1.1.0 the package name changed, so the new version installs as a separate app and does not update 1.0.0. Export the maFile before removing the old version and import it into the new one.
 
 ## Security
 
