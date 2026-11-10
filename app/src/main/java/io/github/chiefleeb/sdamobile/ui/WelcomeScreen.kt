@@ -1,10 +1,9 @@
 package io.github.chiefleeb.sdamobile.ui
 
-import io.github.chiefleeb.sdamobile.i18n.tr
-
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -25,13 +24,19 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import io.github.chiefleeb.sdamobile.i18n.AppLanguage
+import io.github.chiefleeb.sdamobile.i18n.LanguageState
+import io.github.chiefleeb.sdamobile.i18n.switchLanguage
+import io.github.chiefleeb.sdamobile.i18n.tr
 import io.github.chiefleeb.sdamobile.ui.components.GradientButton
 import io.github.chiefleeb.sdamobile.ui.components.ShieldMark
 import io.github.chiefleeb.sdamobile.ui.theme.Bg
@@ -75,7 +80,16 @@ fun WelcomeScreen(
                 .systemBarsPadding()
                 .padding(horizontal = 24.dp)
         ) {
-            Spacer(Modifier.height(52.dp))
+            Spacer(Modifier.height(12.dp))
+
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.End
+            ) {
+                WelcomeLanguageSwitch()
+            }
+
+            Spacer(Modifier.height(28.dp))
 
             Box(
                 modifier = Modifier
@@ -157,6 +171,41 @@ fun WelcomeScreen(
             )
 
             Spacer(Modifier.height(28.dp))
+        }
+    }
+}
+
+@Composable
+private fun WelcomeLanguageSwitch() {
+    val context = LocalContext.current
+    Row(
+        modifier = Modifier
+            .clip(RoundedCornerShape(100.dp))
+            .background(Card.copy(alpha = 0.9f))
+            .border(1.dp, Line, RoundedCornerShape(100.dp))
+            .padding(3.dp)
+    ) {
+        AppLanguage.entries.forEach { language ->
+            val selected = LanguageState.current == language
+            Box(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(100.dp))
+                    .background(
+                        if (selected) Primary.copy(alpha = 0.16f) else Color.Transparent
+                    )
+                    .clickable(enabled = !selected) {
+                        switchLanguage(context, language)
+                    }
+                    .padding(horizontal = 14.dp, vertical = 7.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = language.nativeName,
+                    color = if (selected) Primary else TextSecondary,
+                    fontSize = 12.sp,
+                    fontWeight = FontWeight.SemiBold
+                )
+            }
         }
     }
 }

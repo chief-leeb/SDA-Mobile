@@ -10,7 +10,7 @@ An Android client inspired by [Steam Desktop Authenticator](https://github.com/J
 
 ## Status
 
-Version 1.1.0. The build and lint pass, the app has been tested on a physical device. Try it with an alt account before using it with your main account.
+Version 1.1.1. The build and lint pass, the app has been tested on a physical device. Try it with an alt account before using it with your main account.
 
 ## Features
 
@@ -20,7 +20,7 @@ Version 1.1.0. The build and lint pass, the app has been tested on a physical de
 - Import and export maFile in SDA format (unencrypted JSON).
 - Multiple accounts, active account selection, time sync.
 - Revoke Steam Guard with a revocation code and remove an account from the device.
-- In-app interface language switch in Settings: English or Russian. On first launch the language follows the device locale.
+- In-app interface language switch on the welcome screen and in Settings: English or Russian. On first launch the language follows the device locale.
 
 ## Security
 

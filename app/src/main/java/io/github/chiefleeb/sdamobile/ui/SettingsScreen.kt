@@ -69,6 +69,7 @@ import io.github.chiefleeb.sdamobile.data.MaFile
 import io.github.chiefleeb.sdamobile.data.SdaAccount
 import io.github.chiefleeb.sdamobile.i18n.AppLanguage
 import io.github.chiefleeb.sdamobile.i18n.LanguageState
+import io.github.chiefleeb.sdamobile.i18n.switchLanguage
 import io.github.chiefleeb.sdamobile.i18n.tr
 import io.github.chiefleeb.sdamobile.ui.components.AccountAvatar
 import io.github.chiefleeb.sdamobile.ui.components.Pill
@@ -160,10 +161,7 @@ fun SettingsScreen(
 
         item {
             LanguageCard(
-                onSelect = { language ->
-                    LanguageState.set(context, language)
-                    (context as? android.app.Activity)?.recreate()
-                }
+                onSelect = { language -> switchLanguage(context, language) }
             )
         }
 
@@ -258,7 +256,7 @@ fun SettingsScreen(
                         )
                         Spacer(Modifier.width(8.dp))
                         Text(
-                            "SDA Mobile · 1.1.0",
+                            "SDA Mobile · 1.1.1",
                             color = TextPrimary,
                             fontSize = 14.sp,
                             fontWeight = FontWeight.SemiBold

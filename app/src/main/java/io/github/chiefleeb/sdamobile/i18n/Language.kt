@@ -1,6 +1,8 @@
 package io.github.chiefleeb.sdamobile.i18n
 
+import android.app.Activity
 import android.content.Context
+import android.content.ContextWrapper
 import java.util.Locale
 
 enum class AppLanguage(val tag: String, val nativeName: String) {
@@ -56,3 +58,15 @@ fun tr(ru: String): String =
 /** Translate a string with placeholders or a different word order. */
 fun tr(ru: String, en: String): String =
     if (LanguageState.current == AppLanguage.EN) en else ru
+
+/** Persist the chosen language and recreate the activity so every screen re-reads it. */
+fun switchLanguage(context: Context, language: AppLanguage) {
+    LanguageState.set(context, language)
+    context.findActivity()?.recreate()
+}
+
+private fun Context.findActivity(): Activity? = when (this) {
+    is Activity -> this
+    is ContextWrapper -> baseContext.findActivity()
+    else -> null
+}
