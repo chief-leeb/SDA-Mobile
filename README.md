@@ -2,6 +2,8 @@
 
 [![Android CI](https://github.com/chief-leeb/SDA-Mobile/actions/workflows/android.yml/badge.svg)](https://github.com/chief-leeb/SDA-Mobile/actions/workflows/android.yml)
 
+**Русский** · [English](README.en.md)
+
 Мобильный аналог Steam Desktop Authenticator для Android: коды Steam Guard, подтверждения обменов и маркета, добавление аутентификатора и перенос maFile.
 
 [Скачать APK](https://github.com/chief-leeb/SDA-Mobile/releases/latest) · [Сообщить об ошибке](https://github.com/chief-leeb/SDA-Mobile/issues)
