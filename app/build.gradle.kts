@@ -15,11 +15,11 @@ val keystoreProperties = Properties().apply {
 }
 
 android {
-    namespace = "com.aether.sdamobile"
+    namespace = "com.deepseek.sdamobile"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.aether.sdamobile"
+        applicationId = "com.deepseek.sdamobile"
         minSdk = 26
         targetSdk = 35
         versionCode = 1
