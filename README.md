@@ -4,7 +4,7 @@
 
 **Русский** · [English](README.en.md)
 
-Мобильный аналог [Steam Desktop Authenticator](https://github.com/Jessecar96/SteamDesktopAuthenticator) для Android: коды Steam Guard, подтверждения обменов и маркета, добавление аутентификатора и перенос maFile. Интерфейс на русском и английском.
+Мобильный аналог [Steam Desktop Authenticator](https://github.com/Jessecar96/SteamDesktopAuthenticator) для Android: коды Steam Guard, подтверждения обменов и маркета, добавление аутентификатора и перенос maFile. Интерфейс на русском и английском. Полный вайбкод.
 
 [Скачать APK](https://github.com/chief-leeb/SDA-Mobile/releases/latest) · [Сообщить об ошибке](https://github.com/chief-leeb/SDA-Mobile/issues)
 
