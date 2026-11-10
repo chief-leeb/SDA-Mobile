@@ -6,6 +6,8 @@
 
 An Android client inspired by Steam Desktop Authenticator: Steam Guard codes, trade and market confirmations, authenticator enrollment, and maFile transfer.
 
+> The in-app interface is currently in Russian.
+
 [Download APK](https://github.com/chief-leeb/SDA-Mobile/releases/latest) · [Report an issue](https://github.com/chief-leeb/SDA-Mobile/issues)
 
 ## Status
